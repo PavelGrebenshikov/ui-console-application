@@ -1,20 +1,18 @@
 from PySide2 import QtWidgets
-from console import Ui_MainWindow
+from console_ui import Ui_MainWindow
 import sys
 import os
 import math
 import ast
 
 class ConsoleApplicaiton(QtWidgets.QMainWindow, Ui_MainWindow):
-    # Конструктор класса
+
     def __init__(self):
         super().__init__()
-        # Создание формы и Ui (наш дизайн)
         self.setupUi(self)
-        # Показать наше окно
         self.show()
 
-
+        # button
         self.button_start.clicked.connect(self.start)
     
     def start(self):
